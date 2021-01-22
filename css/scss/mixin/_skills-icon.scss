@@ -1,0 +1,10 @@
+@mixin _skills-icon {
+    position: absolute;
+    content: "";
+    height: 50px;
+    width: 50px;
+    left: 50%;
+    top: -1.5em;
+    transform: translateX(-50%);
+    background-size: contain;
+}

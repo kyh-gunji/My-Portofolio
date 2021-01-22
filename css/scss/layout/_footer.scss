@@ -1,0 +1,29 @@
+// フッター
+.footer {
+    $this: &;
+    width: 100%;
+    padding: 72px 0;
+    color: $white;
+    background-color: $black;
+    text-align: center;
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        @media #{$mq-pc} {
+            margin-bottom: 60px;
+
+        }
+    }
+    &__item {
+        @include _over("");
+        font-size: 40px;
+        margin-right: 40px;
+        &:last-child {
+            margin-right: unset;
+        }
+        &-link {
+            color: $white;
+        }
+    }
+}

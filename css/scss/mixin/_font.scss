@@ -1,0 +1,11 @@
+// テキスト（s）用
+
+@mixin _font {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 12px;
+    @media #{$mq-pc} {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}

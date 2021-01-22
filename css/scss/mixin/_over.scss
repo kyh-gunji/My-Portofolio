@@ -1,0 +1,44 @@
+// テキストリンクのover
+$initType: 'txt';
+
+@mixin _over($type:$initType) {
+    .over {
+        &:hover {
+            opacity: .75;
+        }
+    }
+    @if(($type == 'txt')) {
+        .over {
+            position: relative;
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 2px;
+                content: "";
+                background: transparent;
+                transform: translateX(-100%);
+                transition: all 0.2s cubic-bezier(0.2, 1, 0.2, 1);
+            }
+            &:hover {
+                color: $black;
+                &::before {
+                    background: $black;
+                    transform: translateX(0);
+                    transition-delay: 0.1s;
+                }
+            }
+        }
+    }
+    
+    @else if($type == 'box') {
+        .over {
+            &:hover {
+                transform: scale(1.02);
+                transition: transform .5s;
+            }
+        }
+    }
+}

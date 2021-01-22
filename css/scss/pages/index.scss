@@ -1,0 +1,275 @@
+// foundation
+@import "../common.scss";
+
+// メインビジュアル
+.mv {
+    $this: &;
+    position: relative;
+    height: 100vh;
+    color: $white;
+    letter-spacing: 0.1em;
+    &__bg {
+        #{$this}__pic {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            &:first-child {
+                background-image: url($imgDir + "/mv-slider01.png");
+            }
+            &:nth-child(2) {
+                background-image: url($imgDir + "/mv-slider02.png");
+            }
+            &:last-child {
+                background-image: url($imgDir + "/mv-slider03.png");
+            }
+        }
+    }
+    &__content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        #{$this}__catch {
+            -webkit-text-stroke: 1px $black;
+            position: relative;
+            font-size: 40px;
+            line-height: 1.5;
+            margin-bottom: 0.5em;
+            padding: 1em;
+            @media #{$mq-pc} {
+                padding: unset;
+                font-size: (96 / $vw-pc) * 100vw;
+            }
+            &-sub {
+                @include _fadeIn;
+                font-size: 16px;
+                @media #{$mq-pc} {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    &__icon {
+        @include _bound;
+        -webkit-text-stroke: 1px $black;
+        position: absolute;
+        left: calc(50% - 20px);
+        font-size: 40px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+// About
+.about {
+    $this: &;
+    &__title {
+        @include _title("level2");
+    }
+    &__content {
+        @media #{$mq-pc} {
+            @include _column;
+            #{$this}__img {
+                width: 100%;
+                @media #{$mq-pc} {
+                    width: 40%;
+                }
+            }
+        }
+        #{$this}__txt {
+            width: 100%;
+            @media #{$mq-pc} {
+                width: 50%;
+            }
+            &-title {
+                @include _title("level3");
+                margin: 20px 0;
+                @media #{$mq-pc} {
+                    margin: 0 0 20px;
+                }
+            }
+            &-item {
+                @include _font;
+            }
+        }
+    }
+    &__bottom {
+        @include _btn;
+    }
+}
+
+// Skills
+.skills {
+    background-color: $lightGray;
+    $this: &;
+    &__title {
+        @include _title("level2");
+    }
+    &__content {
+        #{$this}__list {
+            @media #{$mq-pc} {
+                @include _column("column3");
+            }
+        }
+        #{$this}__item {
+            @include _box-shadow;
+            background-color: $white;
+            position: relative;
+            padding: 2em;
+            border: 1px solid $gray;
+            margin-bottom: 40px;
+            &-title {
+                @include _title("level3");
+                font-size: (18 / $vw-sp) * 100vw;
+                letter-spacing: unset;
+                text-align: center;
+                margin-bottom: 24px;
+                @media #{$mq-pc} {
+                    font-size: (24 / $vw-pc) * 100vw;
+                    margin-bottom: 40px;
+                }
+            }
+            &-txt {
+                @include _font;
+                text-align: center;
+                @media #{$mq-pc} {
+                    text-align: left;
+                }
+            }
+            &:first-child {
+                &::before {
+                    @include _skills-icon;
+                    background-image: url(../../../images/skills__html-icon.svg);
+                }
+            }
+            &:nth-child(2) {
+                &::before {
+                    @include _skills-icon;
+                    background-image: url(../../../images/skills__css-icon.svg);
+                }
+            }
+            &:nth-child(3) {
+                &::before {
+                    @include _skills-icon;
+                    background-image: url(../../../images/skills__js-icon.svg);
+                }
+            }
+            &:nth-child(4) {
+                &::before {
+                    @include _skills-icon;
+                    background-image: url(../../../images/skills__wp-icon.svg);
+                }
+            }
+            &:last-child {
+                &::before {
+                    @include _skills-icon;
+                    background-image: url(../../../images/skills__ad-icon.svg);
+                }
+            }
+        }
+    }
+}
+
+// Works
+.works {
+    $this: &;
+    &__title {
+        @include _title("level2");
+    }
+    &__list {
+        @include _column("column3");
+    }
+    &__item {
+        @include _box-shadow;
+        @include _over("box");
+        border: 1px solid $gray;
+        #{$this}__img {
+            margin-bottom: 12px;
+        }
+        &-icon {
+            margin-left: 0.3em;
+        }
+    }
+    &__box {
+        padding: 1em;
+        text-align: center;
+        &-title {
+            @include _title("level3");
+            display: inline-block;
+            font-size: (18 / $vw-sp) * 100vw;
+            letter-spacing: unset;
+            text-align: center;
+            margin-bottom: 24px;
+            background: linear-gradient(transparent 60%, $gray 60%);
+            @media #{$mq-pc} {
+                font-size: (24 / $vw-pc) * 100vw;
+                margin-bottom: 40px;
+            }
+        }
+        &-list {
+            font-size: (12 / $vw-sp) * 100vw;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            text-align: left;
+            @media #{$mq-pc} {
+                font-size: (20 / $vw-pc) * 100vw;
+            }
+        }
+        &-dt {
+            width: 20%;
+            @media #{$mq-pc} {
+                width: 30%;
+            }
+            &::after {
+                display: inline-block;
+                content: ":";
+                margin-left: 0.2em;
+            }
+        }
+        &-dd {
+            width: 80%;
+            margin-bottom: 1em;
+            @media #{$mq-pc} {
+                width: 70%;
+            }
+        }
+    }
+    &__bottom {
+        @include _btn;
+    }
+}
+
+//
+.back__btn {
+    opacity: 0;
+    text-align: center;
+    position: fixed;
+    display: inline;
+    bottom: 2em;
+    right: 1.3em;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $pink;
+    @media #{$mq-pc} {
+        bottom: 4em;
+        right: 4em;
+    }
+    &-icon,
+    .fa,
+    .fab,
+    .fad,
+    .fal,
+    .far,
+    .fas {
+        font-size: 32px;
+        color: $white;
+        display: block;
+        line-height: 40px;
+    }
+}

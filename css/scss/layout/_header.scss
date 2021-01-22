@@ -1,0 +1,48 @@
+// ヘッダー (gnav, logo等含む)
+.header {
+    $this: &;
+    font-weight: bold;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    text-shadow: 1px 1px 2px $pink;
+    background-color: $white;
+    @include _box-shadow;
+    &__inner, .inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0 0 1em;
+        @media #{$mq-pc} {
+            padding: 1em;
+        }
+        #{$this}__logo {
+            font-size: 24px;
+            line-height: 1.5;
+            letter-spacing: .05em;
+            @include _over('txt');
+            @media #{$mq-pc} {
+                font-size: (36/$vw-pc)*100vw;
+            }
+        }
+    }
+    &__gnav {
+        text-align: center;
+        height: 100%;
+        &-list {
+            display: flex;
+        }
+        &-item {
+            @include _over('txt');
+            font-size: 18px;
+            line-height: 2;
+            margin-top: 20px;
+            @media #{$mq-pc} {
+                margin-right: 2em;
+                margin-top: unset;
+            }
+        }
+    }
+}

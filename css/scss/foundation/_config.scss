@@ -1,0 +1,25 @@
+// VW計算用
+$vw-sp: 375;
+$vw-pc: 1280;
+
+// ブレークポイント
+$bp-sp: 768px;
+
+// メディアクエリ モバイルファースト
+$mq-pc: "print, screen and (min-width: #{$bp-sp})";
+
+// カラー
+$black: #000;
+$gray: #ddd;
+$lightGray: #f0f0f0;
+$white: #fff;
+$pink: #e65f78;
+$blue: #2846A0;
+
+// フォント
+$font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+$en-font: "Helvetica Neue", Arial, sans-serif;
+$ja-font: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+//画像格納ディレクトリ
+$imgDir: '../../../images';

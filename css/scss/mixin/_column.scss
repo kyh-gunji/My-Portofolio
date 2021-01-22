@@ -1,0 +1,26 @@
+$initType: "column2";
+@mixin _column($type: $initType) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .column__item {
+        margin-bottom: 20px;
+        @media #{$mq-pc} {
+            margin-bottom: 40px;
+        }
+    }    
+    @if ($type== "column2") {
+        @media #{$mq-pc} {
+            .column__item {
+                width: calc((100% - 20px) / 2);
+            }
+        }
+    }
+    @else if ($type=='column3') {
+        @media #{$mq-pc} {
+            .column__item {
+                width: calc((100% - 20px) / 3);
+            }
+        }    
+    }
+}

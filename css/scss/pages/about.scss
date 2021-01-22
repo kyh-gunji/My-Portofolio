@@ -1,0 +1,84 @@
+@import "../common.scss";
+
+.header {
+    position: unset;
+}
+.about {
+    $this: &;
+    &__title {
+        @include _title("level2");
+        margin-top: 60px;
+        @media #{$mq-pc} {
+            margin-top: 120px;
+        }
+    }
+    &__content {
+        @media #{$mq-pc} {
+            @include _column;
+            #{$this}__img {
+                width: 100%;
+                @media #{$mq-pc} {
+                    width: 40%;
+                }
+            }
+        }
+        #{$this}__txt {
+            width: 100%;
+            @media #{$mq-pc} {
+                width: 50%;
+            }
+            &-title {
+                @include _title("level3");
+                margin: 20px 0;
+                @media #{$mq-pc} {
+                    margin: 0 0 20px;
+                }
+            }
+            &-item {
+                @include _font;
+            }
+        }
+    }
+    &__his {
+        
+    }
+    &__bottom {
+        @include _btn;
+        #{$this}__btn-txt {
+            &::before, &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+
+//
+.back__btn {
+    opacity: 0;
+    text-align: center;
+    position: fixed;
+    display: inline;
+    bottom: 2em;
+    right: 1.3em;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $pink;
+    @media #{$mq-pc} {
+        bottom: 4em;
+        right: 4em;
+    }
+    &-icon,
+    .fa,
+    .fab,
+    .fad,
+    .fal,
+    .far,
+    .fas {
+        font-size: 32px;
+        color: $white;
+        display: block;
+        line-height: 40px;
+    }
+}

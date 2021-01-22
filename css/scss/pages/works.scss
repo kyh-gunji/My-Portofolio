@@ -1,0 +1,138 @@
+@import "../common.scss";
+.header {
+    position: unset;
+}
+.works {
+    $this: &;
+    &__title {
+        @include _title("level2");
+        margin-top: 60px;
+        @media #{$mq-pc} {
+            margin-top: 120px;
+        }
+        &-txt {
+            @include _font;
+            margin-top: -12px;
+            letter-spacing: 0.1em;
+            margin-bottom: 60px;
+            @media #{$mq-pc} {
+                text-align: center;
+                margin-top: -24px;
+                margin-bottom: 120px;
+            }
+        }
+    }
+    &__item {
+        @include _box-shadow;
+        border: 3px solid $gray;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+        @media #{$mq-pc} {
+            flex-direction: row;
+            margin: 0 calc(50% - 47vw) 120px;
+        }
+        &-link {
+            text-decoration: underline;
+            color: $blue;
+        }
+        &-icon {
+            margin-left: 0.3em;
+        }
+    }
+    &__img {
+        width: 100%;
+        @media #{$mq-pc} {
+            width: 50%;
+            align-self: center;
+        }
+    }
+    &__box {
+        @include _over("text");
+        width: 100%;
+        padding: 2em;
+        @media #{$mq-pc} {
+            padding: 2em 1em 2em 0;
+            width: 50%;
+            max-width: 518px;
+        }
+        &-title {
+            @include _title("level3");
+            font-size: (18 / $vw-sp) * 100vw;
+            letter-spacing: unset;
+            text-align: center;
+            margin-bottom: 24px;
+            @media #{$mq-pc} {
+                text-align: left;
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
+        }
+        &-list {
+            font-size: (12 / $vw-sp) * 100vw;
+            line-height: 1.5;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 20px;
+            @media #{$mq-pc} {
+                font-size: 18px;
+            }
+        }
+        &-dt {
+            margin-right: .5em;
+            &::after {
+                display: inline-block;
+                content: ":";
+                margin-left: 0.2em;
+            }
+        }
+        &-dd {
+            width: 71%;
+            margin-bottom: 1em;
+        }
+        &-txt {
+            @include _font;
+            font-size: (12 / $vw-sp) * 100vw;
+            font-weight: bold;
+        }
+    }
+    &__bottom {
+        @include _btn;
+        #{$this}__btn-txt {
+            &::before, &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+//
+.back__btn {
+    opacity: 0;
+    text-align: center;
+    position: fixed;
+    display: inline;
+    bottom: 2em;
+    right: 1.3em;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $pink;
+    @media #{$mq-pc} {
+        bottom: 4em;
+        right: 4em;
+    }
+    &-icon,
+    .fa,
+    .fab,
+    .fad,
+    .fal,
+    .far,
+    .fas {
+        font-size: 32px;
+        color: $white;
+        display: block;
+        line-height: 40px;
+    }
+}

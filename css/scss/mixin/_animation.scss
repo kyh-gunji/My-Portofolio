@@ -1,0 +1,35 @@
+// mvキャッチのフェードイン
+@mixin _fadeIn {
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    animation: fadeIn 5s ease-in infinite;
+}
+
+// mvアイコンのバウンド
+@mixin _bound {
+    @keyframes bound {
+        0%,
+        100% {
+            bottom: 0.5em;
+            transform: scale(1);
+        }
+        30% {
+            bottom: 1em;
+            transform: scale(0.96, 1.04);
+        }
+        60% {
+            transform: scale(1);
+        }
+        90% {
+            bottom: 0.5em;
+            transform: scale(1.15, 0.9);
+        }
+    }
+    animation: bound 1s infinite;
+}

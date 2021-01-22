@@ -1,0 +1,52 @@
+// タイトル（hタグ）
+$initType: "level2";
+
+@mixin _title($type: $initType) {
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    @if ($type == 'level2') {
+        font-size: 32px;
+        margin-bottom: 32px;
+        @media #{$mq-pc} {
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 64px;
+        }
+        &::before {
+            @media #{$mq-pc} {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: -24%;
+                height: 2px;
+                width: 24px;
+                background-color: $black;
+            }
+        }
+        &::after {
+            @media #{$mq-pc} {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                right: -24%;
+                height: 2px;
+                width: 24px;
+                background-color: $black;
+            }
+        }
+    } @else if ($type == "level3") {
+        font-size: 18px;
+        line-height: 1.5;
+        letter-spacing: 0.1em;
+        @media #{$mq-pc} {
+            font-size: 24px;
+        }
+    }
+}
