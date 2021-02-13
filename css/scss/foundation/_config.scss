@@ -14,7 +14,8 @@ $gray: #ddd;
 $lightGray: #f0f0f0;
 $white: #fff;
 $pink: #e65f78;
-$blue: #2846A0;
+$blue: #2846a0;
+$yellow: #fffa99;
 
 // フォント
 $font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -22,4 +23,7 @@ $en-font: "Helvetica Neue", Arial, sans-serif;
 $ja-font: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 
 //画像格納ディレクトリ
-$imgDir: '../../../images';
+$imgDir: "../../../images";
+
+// イージング
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);

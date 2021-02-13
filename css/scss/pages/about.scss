@@ -13,45 +13,123 @@
         }
     }
     &__content {
+        margin-bottom: 40px;
         @media #{$mq-pc} {
             @include _column;
-            #{$this}__img {
-                width: 100%;
-                @media #{$mq-pc} {
-                    width: 40%;
-                }
+            margin-bottom: 80px;
+        }
+        #{$this}__img {
+            @include _box-shadow;
+            width: 100%;
+            align-self: flex-end;
+            @media #{$mq-pc} {
+                width: 40%;
+                align-self: unset;
+                margin-bottom: 40px;
             }
         }
-        #{$this}__txt {
+        #{$this}__prf {
+            @include _font;
             width: 100%;
+            margin-bottom: 20px;
             @media #{$mq-pc} {
                 width: 50%;
+                margin-bottom: 40px;
             }
             &-title {
                 @include _title("level3");
+                display: inline-block;
+                background: linear-gradient(transparent 60%, $gray 60%);
                 margin: 20px 0;
                 @media #{$mq-pc} {
                     margin: 0 0 20px;
                 }
             }
-            &-item {
+            &-list {
+                margin-bottom: 20px;
+                @media #{$mq-pc} {
+                    margin-bottom: 40px;
+                }
+            }
+            &-dt {
+                float: left;
+                margin-right: 3em;
+                &:nth-of-type(2) {
+                    margin-right: 1em;
+                }
+            }
+            &-dd {
+                margin-bottom: 1em;
+            }
+            &-txt {
                 @include _font;
+                text-indent: -1em;
+                &:first-of-type {
+                    font-weight: bold;
+                    margin-bottom: 0.5em;
+                    text-indent: 0;
+                }
             }
         }
     }
     &__his {
-        
+        &-item {
+            @include _font;
+            position: relative;
+            border-left: 1px solid $pink;
+            margin: 0;
+            padding: 0 0 40px 6%;
+            @media #{$mq-pc} {
+                margin: 0 0 0 10%;
+                padding: 0 0 80px 6%;
+            }
+            &::before {
+                display: inline-block;
+                content: "";
+                height: 20px;
+                width: 20px;
+                background-color: $pink;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                transform: translateX(-50%);
+            }
+        }
+        &-box {
+            padding: 0.5em;
+            border: 3px solid $pink;
+            border-radius: 10px;
+            background-color: $lightGray;
+            @media #{$mq-pc} {
+                padding: 1em;
+            }
+        }
+        &-dt {
+            margin-bottom: 1em;
+        }
+        &-dd {
+            font-weight: bold;
+            margin-bottom: 1.5em;
+        }
+        &-txt {
+            &::first-line {
+                text-indent: 1em;
+                @media #{$mq-pc} {
+                    text-indent: unset;
+                }
+            }
+        }
     }
     &__bottom {
         @include _btn;
         #{$this}__btn-txt {
-            &::before, &::after {
+            &::before,
+            &::after {
                 display: none;
             }
         }
     }
 }
-
 
 //
 .back__btn {

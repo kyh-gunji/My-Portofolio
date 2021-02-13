@@ -74,6 +74,7 @@
         @media #{$mq-pc} {
             @include _column;
             #{$this}__img {
+                @include _box-shadow;
                 width: 100%;
                 @media #{$mq-pc} {
                     width: 40%;
@@ -164,13 +165,58 @@
                     background-image: url(../../../images/skills__wp-icon.svg);
                 }
             }
-            &:last-child {
+            &:nth-child(5) {
+                order: 6;
                 &::before {
                     @include _skills-icon;
                     background-image: url(../../../images/skills__ad-icon.svg);
                 }
             }
+            &:nth-child(6) {
+                @media #{$mq-pc} {
+                    background: linear-gradient(to left, $lightGray 50%, $white 100%);
+                }
+            }
         }
+    }
+    /* スキル全体を囲うdiv */
+    &__chart {
+        margin: 30px 0; /* 上下のマージンを指定 */
+    }
+
+    /* スキルの情報 */
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    /* スキルの熟練度（パーセンテージ） */
+    &__percent {
+        opacity: 0; /* 初期状態では透明に */
+        transition: opacity 0.6s;
+    }
+
+    /* スキルバーの親要素 */
+    &__bar-box {
+        position: relative;
+        width: 100%;
+        height: 15px; /* スキルバーの高さ */
+        background-color: $gray; /* スキルバーの背景色 */
+        overflow: hidden;
+    }
+
+    /* スキルバー本体 */
+    &__bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0; /* 初期状態では0 */
+        background-color: $pink; /* スキルバーの色 */
+        transition: width 3s cubic-bezier(0.22, 1, 0.36, 1); /* スキルバーが伸びる速度を調整 */
     }
 }
 
