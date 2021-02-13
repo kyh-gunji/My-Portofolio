@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>経歴紹介 | K Web Creating</title>
+    <title>経歴紹介 | KYOHEI GUNJI PORTFOLIO</title>
     <meta name="description"
         content="WEBクリエイターを目指す、郡司恭平（グンジキョウヘイ）のポートフォリオサイトです。WEBクリエイターを目指す、郡司恭平（グンジキョウヘイ）のポートフォリオ用Webサイトです。このページでは、私の経歴ついてご紹介します。">
     <meta name="format-detection" content="telephone=no">
@@ -30,7 +30,7 @@
 <body class="drawer drawer--right">
     <header class="header">
         <div class="inner header__inner">
-            <h1 class="header__logo"><a href="index.html" class="header__logo-link over">K Web Creating</a></h1>
+            <h1 class="header__logo"><a href="index.html" class="header__logo-link over">K.G. PORTFOLIO</a></h1>
             <nav class="header__gnav _pc">
                 <ul class="header__gnav-list">
                     <li class="header__gnav-item">
@@ -71,11 +71,11 @@
         <!-- ABOUT -->
         <section class="about" id="about">
             <div class="inner about__inner">
-                <h2 class="about__title _title js-title">ABOUT</h2>
+                <h2 class="about__title _title js-title  marker-animation">ABOUT</h2>
                 <div class="about__content _column">
-                    <p class="about__img column__item"><img src="images/about-pic.png" alt="本人写真"></p>
-                    <div class="about__txt _column-item">
-                        <h3 class="about__txt-title _title">プロフィール</h3>
+                    <p class="about__img column__item" data-aos="fade-up" data-aos-duration="1000"><img src="images/about-pic.png" srcset="images/about-pic.png 1x, images/about-pic@2x.png 2x" alt="本人写真"></p>
+                    <div class="about__prf" data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="about__prf-title _title">プロフィール</h3>
                         <dl class="about__prf-list">
                             <dt class="about__prf-dt">氏名</dt>
                             <dd class="about__prf-dd">郡司恭平（Gunji Kyohei）</dd>
@@ -84,38 +84,57 @@
                             <dt class="about__prf-dt">出身</dt>
                             <dd class="about__prf-dd">茨城県</dd>
                         </dl>
-                        <div class="about__his">
-                            <ul class="about__his-list">
-                                <li class="about__his-item">
-                                    <dl class="about__his-dl">
-                                        <dt class="about__his-dt"><time datetime="2017-03">2017/3</time></dt>
-                                        <dd class="about__his-dd">茨城大学人文学部人文コミュニケーション学科　卒業</dd>
-                                    </dl>
-                                </li>
-                                <li class="about__his-item">
-                                    <dl class="about__his-dl">
-                                        <dt class="about__his-dt"><time datetime="2017-04">2017/4</time></dt>
-                                        <dd class="about__his-dd">某鉄鋼物流企業に入社</dd>
-                                    </dl>
-                                </li>
-                                <li class="about__his-item">
-                                    <dl class="about__his-dl">
-                                        <dt class="about__his-dt"><time datetime="2020-08">2020/8</time></dt>
-                                        <dd class="about__his-dd">独学とMENTA（オンラインメンターサービス）を利用したWeb制作学習を開始。</dd>
-                                    </dl>
-                                </li>
-                                <li class="about__his-item">
-                                    <dl class="about__his-dl">
-                                        <dt class="about__his-dt"><time datetime="2020-12">2020/12</time></dt>
-                                        <dd class="about__his-dd">同社を退職し、転職活動中。</dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </div>
+                        <p class="about__prf-txt">Web制作に興味を持ったきっかけ</p>
+                        <p class="about__prf-txt">・前職の仕事でエクセルの関数やVBAを扱ううちに、言語というものに興味が湧き、趣味として触れるようになりました。</p>
+                        <p class="about__prf-txt">・普段からWebサイトに触れる機会が多いことから、特にフロントエンド言語についての関心が高かったです。</p>
+                        <p class="about__prf-txt">・実際に独学してみると、Webサイトを作り上げることに楽しさを感じ、結果としてより一層興味を持つようになりました。</p>
                     </div>
                 </div>
+                <div class="about__his">
+                    <ul class="about__his-list">
+                        <li class="about__his-item" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="about__his-box" data-aos="flip-left" data-aos-duration="1500">
+                                <dl class="about__his-dl">
+                                    <dt class="about__his-dt"><time datetime="2017-03">2017/3</time></dt>
+                                    <dd class="about__his-dd">茨城大学<br class="_sp">人文学部<br class="_sp">人文コミュニケーション学科　卒業</dd>
+                                </dl>
+                                <p class="about__his-txt">研究テーマは『日韓英語教育の比較』でした。外国人教授の研究室だったため、授業やレポートは英語でやり切りました。</p>
+                                <p class="about__his-txt">４年間、体育会アメリカンフットボール部に所属していました。特にバイタリティが向上しました。</p>
+                            </div>
+                        </li>
+                        <li class="about__his-item" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="about__his-box" data-aos="flip-left" data-aos-duration="1500">
+
+                                <dl class="about__his-dl">
+                                    <dt class="about__his-dt"><time datetime="2017-04">2017/4</time></dt>
+                                    <dd class="about__his-dd">某鉄鋼物流企業に入社。</dd>
+                                </dl>
+                                <p class="about__his-txt">港湾運送を担当する部署に配属され、主に「事業企画」「予算決算管理」「協力会社との折衝」を担当しました。</p>
+                                <p class="about__his-txt">ニーズを汲み取る力とコミュニケーション力、主体性が養われました。</p>
+                            </div>
+                        </li>
+                        <li class="about__his-item" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="about__his-box" data-aos="flip-left" data-aos-duration="1500">
+                                <dl class="about__his-dl">
+                                    <dt class="about__his-dt"><time datetime="2020-08">2020/8</time></dt>
+                                    <dd class="about__his-dd">独学とMENTA（オンラインメンターサービス）を利用したWeb制作学習を開始。</dd>
+                                </dl>
+                                <p class="about__his-txt">間違った知識を身に着けないよう、MENTAを通してプロの方からフィードバックやアドバイスを頂いています。</p>
+                                <p class="about__his-txt">基本は自己解決力を養うために、ネットや書籍を利用した独学をしています。</p>
+                            </div>
+                        </li>
+                        <li class="about__his-item" data-aos="fade-down" data-aos-duration="1000">
+                            <div class="about__his-box" data-aos="flip-left" data-aos-duration="1500">
+                                <dl class="about__his-dl">
+                                    <dt class="about__his-dt"><time datetime="2021-01">2021/1</time>〜</dt>
+                                    <dd class="about__his-dd">同社を退職し、転職活動中。</dd>
+                                </dl>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="about__bottom" data-aos="fade-up-right">
-                    <a href="#" class="about__btn _btn"><span class="about__btn-txt">Back to HOME</span></a>
+                    <a href="index.html" class="about__btn _btn"><span class="about__btn-txt">Back to HOME</span></a>
                 </div>
             </div>
         </section>
@@ -133,7 +152,7 @@
                 <li class="footer__item"><a href="https://www.facebook.com/umetube.gno" class="footer__item-link over"
                         target="_blank" rel="noopener"><i class="fab fa-facebook footer__item-icon"></i></a></li>
             </ul>
-            <p class="footer__copy"><small>2021 &copy; Kyohei Web Creating</small></p>
+            <p class="footer__copy"><small>2021 &copy; KYOHEI GUNJI PORTFOLIO</small></p>
         </div>
     </footer>
 
