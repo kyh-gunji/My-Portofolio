@@ -2,18 +2,19 @@
 
 // catchの左からフェードイン
 $(function () {
-  var h1 = $('.js-catch');
+  var cth = $('.js-catch');
 
-  var txt_array = h1.text().split('');
+  var txt_array = cth.text().split('');
 
   $('.js-catch').html('');
 
   $.each(txt_array, function (index, element) {
     var new_element = $("<span/>").text(element).css({ opacity: 0 });
-    h1.append(new_element);
+    cth.append(new_element);
     new_element.delay(index * 100);
     new_element.animate({ opacity: 1 }, 3000);
   });
+    $('.js-catch').children('span:nth-child(17)').html('<span>,</span><br>');
 });
 // mvからaboutへのダウン
 $(function () {
@@ -70,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const animateCountUp = el => {
     let frame = 0;
     const countTo = parseInt(el.innerHTML, 10);
-    const counter = setInterval( () => {
+    const counter = setInterval(() => {
       frame++;
       const progress = easeOut(frame / totalFrames);
       const currentCount = Math.round(countTo * progress);
@@ -86,9 +87,9 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   // Intersection observerに渡すコールバック関数
-  const cb = function(entries, observer) {
+  const cb = function (entries, observer) {
     entries.forEach((entry) => {
-      if(entry.isIntersecting) {
+      if (entry.isIntersecting) {
         const proficiencyVal = entry.target.dataset.proficiency;
         const skillBar = entry.target.querySelector('.skills__bar');
         const percentage = entry.target.querySelector('.skills__percent');
@@ -119,13 +120,13 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // マーカーアニメーション
-$(window).scroll(function (){
-	$(".marker-animation").each(function(){
-	  var position = $(this).offset().top; //ページの一番上から要素までの距離を取得
-	  var scroll = $(window).scrollTop(); //スクロールの位置を取得
-	  var windowHeight = $(window).height(); //ウインドウの高さを取得
-	  if (scroll > position - windowHeight){ //スクロール位置が要素の位置を過ぎたとき
-	    $(this).addClass('active'); //クラス「active」を与える
-	  }
-	});
+$(window).scroll(function () {
+  $(".marker-animation").each(function () {
+    var position = $(this).offset().top; //ページの一番上から要素までの距離を取得
+    var scroll = $(window).scrollTop(); //スクロールの位置を取得
+    var windowHeight = $(window).height(); //ウインドウの高さを取得
+    if (scroll > position - windowHeight) { //スクロール位置が要素の位置を過ぎたとき
+      $(this).addClass('active'); //クラス「active」を与える
+    }
+  });
 });

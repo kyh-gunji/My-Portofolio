@@ -15,40 +15,33 @@
             background-position: center;
             height: 100vh;
             &:first-child {
-                background-image: url($imgDir + "/mv-slider01.png");
+                background-image: url($imgDir + "/mv-slider01.jpg");
             }
             &:nth-child(2) {
-                background-image: url($imgDir + "/mv-slider02.png");
+                background-image: url($imgDir + "/mv-slider02.jpg");
             }
             &:last-child {
-                background-image: url($imgDir + "/mv-slider03.png");
+                background-image: url($imgDir + "/mv-slider03.jpg");
             }
         }
     }
     &__content {
         width: 100%;
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
         #{$this}__catch {
             -webkit-text-stroke: 1px $black;
             position: relative;
-            font-size: 40px;
+            font-size: 8vw;
+            font-weight: bold;
             line-height: 1.5;
-            margin-bottom: 0.5em;
             padding: 1em;
             @media #{$mq-pc} {
                 padding: unset;
                 font-size: (96 / $vw-pc) * 100vw;
-            }
-            &-sub {
-                @include _fadeIn;
-                font-size: 16px;
-                @media #{$mq-pc} {
-                    font-size: 24px;
-                }
             }
         }
     }
@@ -223,6 +216,11 @@
 // Works
 .works {
     $this: &;
+    &__inner {
+        @media #{$mq-pc} {
+            max-width: 2000px;
+        }
+    }
     &__title {
         @include _title("level2");
     }

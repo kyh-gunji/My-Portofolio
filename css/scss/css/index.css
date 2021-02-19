@@ -526,7 +526,7 @@ img {
 
 /*マーカーアニメーション*/
 .marker-animation.active {
-  background-position: -100% 0.5em;
+  background-position: -65% 0.5em;
 }
 @media print, screen and (min-width: 768px) {
   .marker-animation.active {
@@ -539,7 +539,7 @@ img {
   background: -webkit-linear-gradient(left, transparent 60%, #fffa99 60%);
   background: linear-gradient(left, transparent 60%, #fffa99 60%);
   background-repeat: repeat-x;
-  background-size: 200% 0.8em;
+  background-size: 250% 0.8em;
   background-position: 0 0.5em;
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
@@ -725,18 +725,18 @@ img {
   height: 100vh;
 }
 .mv__bg .mv__pic:first-child {
-  background-image: url("../../../images/mv-slider01.png");
+  background-image: url("../../../images/mv-slider01.jpg");
 }
 .mv__bg .mv__pic:nth-child(2) {
-  background-image: url("../../../images/mv-slider02.png");
+  background-image: url("../../../images/mv-slider02.jpg");
 }
 .mv__bg .mv__pic:last-child {
-  background-image: url("../../../images/mv-slider03.png");
+  background-image: url("../../../images/mv-slider03.jpg");
 }
 .mv__content {
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -745,41 +745,15 @@ img {
 .mv__content .mv__catch {
   -webkit-text-stroke: 1px #000;
   position: relative;
-  font-size: 40px;
+  font-size: 8vw;
+  font-weight: bold;
   line-height: 1.5;
-  margin-bottom: 0.5em;
   padding: 1em;
 }
 @media print, screen and (min-width: 768px) {
   .mv__content .mv__catch {
     padding: unset;
     font-size: 7.5vw;
-  }
-}
-.mv__content .mv__catch-sub {
-  -webkit-animation: fadeIn 5s ease-in infinite;
-          animation: fadeIn 5s ease-in infinite;
-  font-size: 16px;
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@media print, screen and (min-width: 768px) {
-  .mv__content .mv__catch-sub {
-    font-size: 24px;
   }
 }
 .mv__icon {
@@ -1307,6 +1281,11 @@ img {
   /* スキルバーが伸びる速度を調整 */
 }
 
+@media print, screen and (min-width: 768px) {
+  .works__inner {
+    max-width: 2000px;
+  }
+}
 .works__title {
   line-height: 1.5;
   letter-spacing: 0.1em;

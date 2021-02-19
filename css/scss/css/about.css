@@ -526,7 +526,7 @@ img {
 
 /*マーカーアニメーション*/
 .marker-animation.active {
-  background-position: -100% 0.5em;
+  background-position: -65% 0.5em;
 }
 @media print, screen and (min-width: 768px) {
   .marker-animation.active {
@@ -539,7 +539,7 @@ img {
   background: -webkit-linear-gradient(left, transparent 60%, #fffa99 60%);
   background: linear-gradient(left, transparent 60%, #fffa99 60%);
   background-repeat: repeat-x;
-  background-size: 200% 0.8em;
+  background-size: 250% 0.8em;
   background-position: 0 0.5em;
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
